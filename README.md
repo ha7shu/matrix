@@ -28,6 +28,3 @@ To run this program, follow these steps:
     >   ./matrix
     - On Windows:
     >   ./matrix.exe 
-
-## Contributions
-Contributions to this repository are welcome. If you find any issues or have any suggestions for improvements, feel free to open an issue or create a pull request.
