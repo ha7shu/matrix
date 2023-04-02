@@ -9,42 +9,52 @@ int main()
     scanf("%d", &rows);
     printf("Enter the number of columns: ");
     scanf("%d", &cols);
-    printf("\nOrder of the matrix is %d X %d \n", rows, cols);
+    printf("Order of the matrix is %d X %d \n", rows, cols);
     int matrix[rows][cols];
-    printf("\nEnter the elements of the matrix: \n");
+    printf("Enter the elements of the matrix: \n");
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            printf("Matrix %d%d : ", i, j);
             scanf("%d", &matrix[i][j]);
         }
     }
-    printf("\nThe matrix formed is: \n");
+    printf("The matrix formed is: \n");
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < cols; j++){
             printf("%d ", matrix[i][j]);
         }
         printf("\n");
     }
+    printf("Available operations that can be performed on matrix is : \n1. Sum of all elements in the matrix. \n2. Transpose of the matrix. \n3. Determinant of the matrix. \n");
+    int choice;
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
     int transPose[cols][rows];
-        printf("\nSum of all elements in the matrix is %d \n", sumOfElements(rows, cols, matrix));
+    switch(choice){
+        case 1:
+        printf("Sum of all elements in the matrix is %d \n", sumOfElements(rows, cols, matrix));
+        break;
+        case 2:
         transpose(rows, cols, matrix, transPose);
-        printf("\nTranspose of the matrix is: \n");
+        printf("Transpose of the matrix is: \n");
         for(int i = 0; i < cols; i++){
             for(int j = 0; j < rows; j++){
                 printf("%d ", transPose[i][j]);
             }
             printf("\n");
         }
-        printf("\nDeterminant of the matrix is %d \n", determinant(rows, matrix));
+        break;
+        case 3:
+        printf("Determinant of the matrix is %d \n", determinant(rows, matrix));
+        break;
+    }
     if(rows == cols){
-        int Diag[rows], trace = 0;
+        int Diag[rows];
         diagonal(rows, matrix, Diag);
-        printf("\nDiagonal of the matrix is: \n");
+        printf("Diagonal of the matrix is: \n");
         for(int i = 0; i < rows; i++){
             printf("%d ", Diag[i]);
-            trace += Diag[i];
-        }
-        printf("\nSum of diagonal elements i.e Trace of matrix is %d\n", trace);
+        } 
+        printf("\n");
     }
     return 0;
 }
