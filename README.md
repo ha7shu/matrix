@@ -4,7 +4,7 @@
 
 A matrix is a rectangluar array in which elements are stored in rows and columns.
 
-This is an attempt to perform various operations on matrix using **C** . 
+This is an attempt to perform various operations on matrix using **C** language. 
 
 ## Features 
 
@@ -24,10 +24,11 @@ To run this program, follow these steps:
 
 - Clone this repository to your local machine.
 - Open a command prompt or terminal and navigate to the directory where the repository is cloned.
-- Compile the program using your preferred C compiler.
+- Compile the program using C compiler.
     > `gcc main.c matrix.c -o matrix`
 - Run the executable file.
-    - On Linux or MacOS:
-    >   ./matrix
-    - On Windows:
-    >   ./matrix.exe 
+    >   `./matrix`
+
+## Contributions 
+
+Feel free to contribute to this repository by adding more matrix operations or improving the existing ones. Submit a pull request for your changes to be added or create issues if you encounter any...
