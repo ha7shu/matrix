@@ -3,17 +3,20 @@
 # Matrix Operations
 
 A matrix is a rectangluar array in which elements are stored in rows and columns.
+
 This is an attempt to perform various operations on matrix using **C** . 
 
 ## Features 
 
 The program includes the following features:
 
-1. Sum of elements in a matrix
-2. Determinant of a matrix
-3. Diagonal of a matrix
-4. Trace of a matrix
-5. More to be added soon...
+1. Sum of elements in matrix
+2. Transpose of matrix
+3. Determinant of matrix
+4. Diagonal of matrix
+5. Trace of matrix
+6. Addition of two matrices
+7. Multiplication of two matrices
 
 ## How to Run
 
