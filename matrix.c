@@ -45,9 +45,9 @@ int determinant(int n, int matrix[n][n]) {
     int submatrix[n-1][n-1];
     int sign = 1;
 
-    if (n == 1) { // base case
+    if (n == 1) { // base case for 1 X 1 order of matrix
         return matrix[0][0];
-    } else if (n == 2) { // base case
+    } else if (n == 2) { // base case for 2 X 2 order of matrix
         return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
     } else {
         for (int i = 0; i < n; i++) {
