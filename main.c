@@ -80,6 +80,8 @@ int main()
             }
             printf("\n");
         }
+        } else {
+            printf("\nSum of these two matrices is not possible because either number of rows of matrix 1 (%d) != number of rows of matrix 2 (%d) or number of columns of matrix 1 (%d) != numeber of columns of matrix 2 (%d) \n", rows, rows1, cols, cols1);
         }
         if(cols == rows1){
             int result2[rows1][cols1];
@@ -91,6 +93,8 @@ int main()
             }
             printf("\n");
         }
+        } else {
+            printf("\nProduct of these two matrices is not possible because number of columns of matrix 1 %d != number of rows of matrix 2 %d \n", cols, rows1);
         }
     } else {
         printf("\nThank you for using this program.\n");
