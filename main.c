@@ -46,5 +46,54 @@ int main()
         } 
         printf("\nSum of diagnonal elements i.e trace of matrix is %d \n", trace);
     }
+    char choice;
+    printf("\nDo you want to perform Addition and Multiplicaton of two matrices? (y/n): ");
+    scanf(" %c", &choice);
+    if(choice == 'y' || choice == 'Y'){
+        int rows1, cols1;
+        printf("\nEnter the number of rows for 2nd matrix : ");
+        scanf("%d", &rows1);
+        printf("\nEnter the number of columns for 2nd matrix : ");
+        scanf("%d", &cols1);
+        int matrix1[rows1][cols1];
+        printf("\nEnter the elements of the matrix: \n");
+        for (int i = 0; i < rows1; i++){
+            for (int j = 0; j < cols1; j++){
+                printf("Element %d%d: ", i+1, j+1);
+                scanf("%d", &matrix1[i][j]);
+            }
+        }
+        printf("\nSecond Matrix formed is : \n");
+        for(int i = 0; i < rows1; i++){
+            for(int j = 0; j < cols1; j++){
+                printf("%d ", matrix1[i][j]);
+            }
+            printf("\n");
+        }
+        if(rows == rows1 && cols == cols1){
+                    int result1[rows1][cols1];
+        addTwoMatrices(rows1, cols1, matrix, matrix1, result1);
+        printf("\nSum of 1st matrix and 2nd matrix is : \n");
+        for(int i = 0; i < rows1; i++){
+            for(int j = 0; j < cols1; j++){
+                printf("%d ", result1[i][j]);
+            }
+            printf("\n");
+        }
+        }
+        if(cols == rows1){
+            int result2[rows1][cols1];
+        multiplyTwoMatrices(rows, cols, matrix, rows1, cols1, matrix1, result2);
+        printf("\nProduct of 1st matrix and 2nd matrix is : \n");
+        for(int i = 0; i < rows1; i++){
+            for(int j = 0; j < cols1; j++){
+                printf("%d ", result2[i][j]);
+            }
+            printf("\n");
+        }
+        }
+    } else {
+        printf("\nThank you for using this program.\n");
+    }
     return 0;
 }
