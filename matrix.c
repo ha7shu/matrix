@@ -1,6 +1,5 @@
 #include "matrix.h"
 
-// returns sum of all elements in the matrix
 int sumOfElements(int rows, int cols, int matrix[rows][cols]){
     int i, j, total = 0;
     for(i = 0; i < rows; i++){
@@ -11,8 +10,6 @@ int sumOfElements(int rows, int cols, int matrix[rows][cols]){
     return total;
 }
 
-// calculate transpose of the matrix and store the result in another matrix by 
-// interchanging the rows and columns
 void transpose(int rows, int cols, int matrix[rows][cols], int result[cols][rows]){
     int i, j;
     for(i = 0; i < rows; i++){
@@ -22,7 +19,6 @@ void transpose(int rows, int cols, int matrix[rows][cols], int result[cols][rows
     }
 }
 
-// add two matrices and store the result in another matrix 
 void addTwoMatrices(int rows, int cols, int matrix1[rows][cols], int matrix2[rows][cols], int result[rows][cols]){
     int i, j;
     for(i = 0; i < rows; i++){
@@ -32,7 +28,6 @@ void addTwoMatrices(int rows, int cols, int matrix1[rows][cols], int matrix2[row
     }
 }
 
-// multiply two matrices such that col1 = rows2 following laws of matrix multiplication
 void multiplyTwoMatrices(int rows1, int cols1, int matrix1[rows1][cols1], int rows2, int cols2, int matrix2[rows2][cols2], int result[rows1][cols2]){
     int i, j, k;
     for(i = 0; i < rows1; i++){
@@ -45,7 +40,6 @@ void multiplyTwoMatrices(int rows1, int cols1, int matrix1[rows1][cols1], int ro
     }
 }
 
-// determinant of the matrix only if rows == cols
 int determinant(int n, int matrix[n][n]) {
     int det = 0;
     int submatrix[n-1][n-1];
@@ -74,7 +68,6 @@ int determinant(int n, int matrix[n][n]) {
     return det;
 }
 
-// major diagonal of a square matrix
 void diagonal(int n,int matrix[n][n], int diag[n]){
     int i, j;
     for(i = 0; i < n; i++){
